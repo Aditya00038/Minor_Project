@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "527334158898",
+    "project_id": "otp-verify-f4700",
+    "storage_bucket": "otp-verify-f4700.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527334158898:android:bdd740dafe568f279cc22b",
+        "android_client_info": {
+          "package_name": "com.citizenapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtxLJdQHmitjTfK3_CwnxqGYgQ4prPqZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
