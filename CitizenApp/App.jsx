@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -7,6 +8,13 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import CustomHeader from './src/screens/CustomHeader'; // adjust path if needed
 // import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Chatbot from './src/screens/Chatbot';
+=======
+import React, {useState, useEffect} from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {ActivityIndicator, View, StyleSheet} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+>>>>>>> c22b090bf49e5b565a8ec580405f2549985ac3ca
 import Login from './src/screens/Login';
 import Register from './src/screens/Register';
 import Dashboard from './src/screens/Dashboard';
@@ -16,6 +24,7 @@ import ReportDetails from './src/screens/ReportDetails';
 import BeforeAfter from './src/screens/BeforeAfter';
 import RateFeedback from './src/screens/RateFeedback';
 import Profile from './src/screens/Profile';
+<<<<<<< HEAD
 import Leaderboard from './src/screens/Leaderboard';
 import { Image } from 'react-native';
 
@@ -91,6 +100,10 @@ function MainTabs() {
     </Tab.Navigator>
   );
 }
+=======
+
+const Stack = createNativeStackNavigator();
+>>>>>>> c22b090bf49e5b565a8ec580405f2549985ac3ca
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -123,6 +136,7 @@ const App = () => {
 
   return (
     <NavigationContainer>
+<<<<<<< HEAD
       <Stack.Navigator screenOptions={{
           header: () => <CustomHeader />, // Use your custom header everywhere
         }}>
@@ -141,6 +155,22 @@ const App = () => {
             <Stack.Screen name="Profile" component={Profile} />
           </>
         )}
+=======
+      <Stack.Navigator
+        initialRouteName={isLoggedIn ? 'Dashboard' : 'Login'}
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="Dashboard" component={Dashboard} />
+        <Stack.Screen name="ReportProblem" component={ReportProblem} />
+        <Stack.Screen name="MyReports" component={MyReports} />
+        <Stack.Screen name="ReportDetails" component={ReportDetails} />
+        <Stack.Screen name="BeforeAfter" component={BeforeAfter} />
+        <Stack.Screen name="RateFeedback" component={RateFeedback} />
+        <Stack.Screen name="Profile" component={Profile} />
+>>>>>>> c22b090bf49e5b565a8ec580405f2549985ac3ca
       </Stack.Navigator>
     </NavigationContainer>
   );
