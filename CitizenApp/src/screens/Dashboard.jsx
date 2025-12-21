@@ -1,9 +1,4 @@
 import React, {useState, useEffect} from 'react';
-<<<<<<< HEAD
-import {NavigationContainer} from '@react-navigation/native';
-import { BottomTabBar } from '@react-navigation/bottom-tabs';
-=======
->>>>>>> c22b090bf49e5b565a8ec580405f2549985ac3ca
 import {
   StyleSheet,
   Text,
@@ -16,12 +11,6 @@ import {
 import {authAPI} from '../config/api';
 import {theme, problemCategories} from '../config/theme';
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> c22b090bf49e5b565a8ec580405f2549985ac3ca
 const Dashboard = ({navigation}) => {
   const [user, setUser] = useState(null);
   const [stats, setStats] = useState({
@@ -65,11 +54,7 @@ const Dashboard = ({navigation}) => {
         <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
       }>
       {/* Header */}
-<<<<<<< HEAD
       {/* <View style={styles.header}>
-=======
-      <View style={styles.header}>
->>>>>>> c22b090bf49e5b565a8ec580405f2549985ac3ca
         <View>
           <Text style={styles.greeting}>Hello,</Text>
           <Text style={styles.userName}>{user?.name || 'Citizen'}</Text>
@@ -81,11 +66,7 @@ const Dashboard = ({navigation}) => {
             </Text>
           </View>
         </TouchableOpacity>
-<<<<<<< HEAD
       </View> */}
-=======
-      </View>
->>>>>>> c22b090bf49e5b565a8ec580405f2549985ac3ca
 
       {/* Stats Cards */}
       <View style={styles.statsContainer}>

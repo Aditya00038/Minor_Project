@@ -1,20 +1,11 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { ActivityIndicator, View, StyleSheet } from 'react-native';
+import { ActivityIndicator, View, StyleSheet, Image } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import CustomHeader from './src/screens/CustomHeader'; // adjust path if needed
-// import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import CustomHeader from './src/screens/CustomHeader';
 import Chatbot from './src/screens/Chatbot';
-=======
-import React, {useState, useEffect} from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {ActivityIndicator, View, StyleSheet} from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
->>>>>>> c22b090bf49e5b565a8ec580405f2549985ac3ca
 import Login from './src/screens/Login';
 import Register from './src/screens/Register';
 import Dashboard from './src/screens/Dashboard';
@@ -24,9 +15,7 @@ import ReportDetails from './src/screens/ReportDetails';
 import BeforeAfter from './src/screens/BeforeAfter';
 import RateFeedback from './src/screens/RateFeedback';
 import Profile from './src/screens/Profile';
-<<<<<<< HEAD
 import Leaderboard from './src/screens/Leaderboard';
-import { Image } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -41,7 +30,6 @@ function MainTabs() {
         tabBarInactiveTintColor: '#ffffff96',
         tabBarStyle: {
           height: 80,
-          // paddingBottom: 5,
           paddingTop: 15,
           backgroundColor: '#4A90E2',
         },
@@ -52,7 +40,7 @@ function MainTabs() {
         component={Dashboard}
         options={{
           tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color }) => (
             <Image source={{ uri: 'https://img.icons8.com/ios-filled/50/000000/home.png' }} style={{ width: 25, height: 25, tintColor: color }} />
           ),
         }}
@@ -62,7 +50,7 @@ function MainTabs() {
         component={Chatbot}
         options={{
           tabBarLabel: 'Chatbot',
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color }) => (
             <Image source={{ uri: 'https://cdn-icons-png.flaticon.com/512/1380/1380370.png' }} style={{ width: 25, height: 25, tintColor: color }} />
           ),
         }}
@@ -72,7 +60,7 @@ function MainTabs() {
         component={ReportProblem}
         options={{
           tabBarLabel: 'Report',
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color }) => (
             <Image source={{ uri: 'https://img.icons8.com/ios-filled/50/000000/plus-math.png' }} style={{ width: 30, height: 30, tintColor: color }} />
           ),
         }}
@@ -82,7 +70,7 @@ function MainTabs() {
         component={MyReports}
         options={{
           tabBarLabel: 'My Reports',
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color }) => (
             <Image source={{ uri: 'https://img.icons8.com/ios-filled/50/000000/group.png' }} style={{ width: 25, height: 25, tintColor: color }} />
           ),
         }}
@@ -92,7 +80,7 @@ function MainTabs() {
         component={Leaderboard}
         options={{
           tabBarLabel: 'Leaderboard',
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ color }) => (
             <Image source={{ uri: 'https://img.icons8.com/ios-filled/50/000000/trophy.png' }} style={{ width: 25, height: 25, tintColor: color }} />
           ),
         }}
@@ -100,10 +88,6 @@ function MainTabs() {
     </Tab.Navigator>
   );
 }
-=======
-
-const Stack = createNativeStackNavigator();
->>>>>>> c22b090bf49e5b565a8ec580405f2549985ac3ca
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -136,9 +120,9 @@ const App = () => {
 
   return (
     <NavigationContainer>
-<<<<<<< HEAD
-      <Stack.Navigator screenOptions={{
-          header: () => <CustomHeader />, // Use your custom header everywhere
+      <Stack.Navigator
+        screenOptions={{
+          header: () => <CustomHeader />,
         }}>
         {!isLoggedIn ? (
           <>
@@ -155,22 +139,6 @@ const App = () => {
             <Stack.Screen name="Profile" component={Profile} />
           </>
         )}
-=======
-      <Stack.Navigator
-        initialRouteName={isLoggedIn ? 'Dashboard' : 'Login'}
-        screenOptions={{
-          headerShown: false,
-        }}>
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Register" component={Register} />
-        <Stack.Screen name="Dashboard" component={Dashboard} />
-        <Stack.Screen name="ReportProblem" component={ReportProblem} />
-        <Stack.Screen name="MyReports" component={MyReports} />
-        <Stack.Screen name="ReportDetails" component={ReportDetails} />
-        <Stack.Screen name="BeforeAfter" component={BeforeAfter} />
-        <Stack.Screen name="RateFeedback" component={RateFeedback} />
-        <Stack.Screen name="Profile" component={Profile} />
->>>>>>> c22b090bf49e5b565a8ec580405f2549985ac3ca
       </Stack.Navigator>
     </NavigationContainer>
   );
